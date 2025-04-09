@@ -3,10 +3,10 @@ import "./EventGallery.css";
 
 const images = [
   "./image1.jpg",
-  "./image1.jpg",
-  "./image1.jpg",
-  "./image1.jpg",
-  "./image1.jpg",
+  "./IMG_4237.JPG",
+   "./IMG_4272.JPG",
+  "./IMG_8514.jpg",
+  "./DSC_0883[1].jpg",
   "./image1.jpg",
   "./image1.jpg",
   "./image1.jpg",
