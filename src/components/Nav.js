@@ -1,47 +1,42 @@
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";  // ✅ Import Link
+import { Link } from "react-router-dom";
 import "./Nav.css";
 
 const Nav = () => {
-  const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
-
-  const toggleMenu = () => {
-    setIsOpen(!isOpen);
-  };
 
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 0);
     };
-
     window.addEventListener("scroll", handleScroll);
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   return (
     <nav className={`navbar ${isScrolled ? "scrolled" : ""}`}>
-      {/* ✅ Logo as Home Link */}
+      {/* Logo */}
       <Link to="/" className="nav-logo">
         <img src="/rnlogo.jpg" alt="Logo" className="nav-icon" />
       </Link>
 
-      {/* ✅ Hamburger Menu */}
-      <div className="hamburger" onClick={toggleMenu}>
-        <div className={`bar ${isOpen ? "open" : ""}`}></div>
-        <div className={`bar ${isOpen ? "open" : ""}`}></div>
-        <div className={`bar ${isOpen ? "open" : ""}`}></div>
-      </div>
-
-      {/* ✅ Navigation Links */}
-      <ul className={`nav-links ${isOpen ? "open" : ""}`} onClick={() => setIsOpen(false)}>
-        <li><Link to="/">HOME</Link></li>
-        <li><Link to="/events">EVENTS</Link></li> {/* ✅ Ensure lowercase "events" */}
-        <li><Link to="/team">TEAM-RN</Link></li>
-        <li><Link to="/sponsors">SPONSORS</Link></li>
-        <li><Link to="/contact">CONTACT</Link></li>
+      {/* Navigation Links */}
+      <ul className="nav-links">
+        <li>
+          <a href="#about-section">ABOUT</a>
+        </li>
+        <li>
+          <a href="#events-section">EVENTS</a>
+        </li>
+        <li>
+          <a href="#team-section">TEAM-RN</a>
+        </li>
+        <li>
+          <a href="#sponsors-section">SPONSORS</a>
+        </li>
+        <li>
+          <a href="#footer">CONTACT</a>
+        </li>
       </ul>
     </nav>
   );

@@ -1,13 +1,14 @@
 import React, { useEffect } from "react";
 import "./Home.css";
 import Nav from "./components/Nav";
-import Event from "./components/Events";
 import Footer from "./components/Footer";
 import WavecrazeSponser from "./components/WavecrazeSponser";
 import Timer from "./components/Timer";
 import About from "./components/About";
-import Team from "./components/Team";
+import Events from "./components/Events";
 import EventGallery from "./components/EventGallery";
+import Team from "./components/Team";
+
 const Home = () => {
   useEffect(() => {
     console.log("✅ Home.js component loaded");
@@ -15,33 +16,52 @@ const Home = () => {
 
   return (
     <div>
-      <div className="home">
-        <Nav />
+      {/* Navbar */}
+      <Nav />
+
+      {/* Home Section */}
+      <div className="home" id="home-section">
         <div className="head">
-          
-          {/* Animated Heading */}
           <p>
             RADIONITroz presents
             <span>WAVECRAZE 2.0</span>
           </p>
         </div>
       </div>
-    
-      <div>
-  <Timer date="2025-04-10T15:00:00" />
-</div>
 
-     <div>
-      <About/>
-     </div>
-     <Event/>
-     <EventGallery/>
-      <div>
-        <WavecrazeSponser />
-        <Team/>
- 
-        <Footer />
+      {/* Timer Section */}
+      <div id="timer-section">
+        <Timer date="2025-04-10T15:00:00" />
       </div>
+
+      {/* About Section */}
+      <div id="about-section">
+        <About />
+      </div>
+
+      {/* Events Section */}
+      <div id="events-section">
+        <Events />
+      </div>
+
+      {/* Event Gallery Section */}
+      <div id="event-gallery-section">
+        <EventGallery />
+      </div>
+
+      {/* Sponsors Section */}
+      <div id="sponsors-section">
+        <WavecrazeSponser />
+      </div>
+
+      {/* Team Section */}
+      <div id="team-section">
+        <Team />
+      </div>
+
+      {/* Footer Section */}
+      <div id="footer">
+      <Footer /></div>
     </div>
   );
 };
