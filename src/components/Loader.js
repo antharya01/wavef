@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect } from 'react';
 import './Loader.css';
 import Home from '../Home';
@@ -17,11 +18,11 @@ const Loader = () => {
       {loading ? (
         <div id="preloader">
           <div className="bar-container">
-            <div className="bar"></div>
-            <div className="bar"></div>
-            <div className="bar"></div>
-            <div className="bar"></div>
-            <div className="bar"></div>
+            <div className="barb"></div>
+            <div className="barb"></div>
+            <div className="barb"></div>
+            <div className="barb"></div>
+            <div className="barb"></div>
           </div>
           <h1 style={{ color: "white" }}>Coming soon...</h1>
         </div>

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Loader from "./components/Loader";
 import Home from "./Home";
 import Events from "./components/Events";
@@ -18,14 +18,16 @@ function App() {
         <Loader onLoaded={handleLoaded} />
       ) : (
         <>
+        <Router>
           <Nav />
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/Event" element={<Events />} /> {/* Matches the navbar link */}
+            <Route path="/events" element={<Events />} /> {/* Matches the navbar link */}
             <Route path="/team" element={<h1>Team Page</h1>} />
             <Route path="/sponsors" element={<h1>Sponsors Page</h1>} />
             <Route path="/contact" element={<h1>Contact Page</h1>} />
           </Routes>
+          </Router>
         </>
       )}
     </>

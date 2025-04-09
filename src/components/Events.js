@@ -1,31 +1,34 @@
+import Nav from "./Nav";
 import React from 'react';
 import { motion } from 'framer-motion';
 import './Events.css';
 
-const Event = () => {
+const Events = () => {
     const events = [
         {
-            title: "Talent X",
-            date: "29/03/2025",
-            time: "6:00 PM",
-            venue: "Lords",
+            title: "TALENT X",
+            date: "10/04/2025",
+            time: "3:00 PM",
+            venue: "New Auditorium",
             description: "Join us for an evening of talent and entertainment at Talent X!",
-            imgSrc: "rcomedynight.jpg",
-            link: "https://forms.gle/sampleTalentX"
+            imgSrc: "/talentxposter.png",
+            link: "https://forms.gle/6WMeDX8oGm2ArVBZ9"
         },
         {
-            title: "Glam It Up",
-            date: "31/03/2025",
-            time: "8:00 PM",
-            venue: "Fashion Arena",
+            title: "GLAM IT UP",
+            date: "10/04/2025",
+            time: "5:30 PM",
+            venue: "New Auditorium",
             description: "Witness the most glamorous fashion night in town.",
-            imgSrc: "rcomedynight.jpg",
-            link: "https://forms.gle/sampleGlamItUp"
+            imgSrc: "/glamitup.jpg",
+            link: "https://forms.gle/EXHBRX3L6o9f1CAH8"
         }
     ];
 
     return (
+        
         <div className="event">
+             <Nav />
             <h1>Our Events</h1>
             <div className="events">
                 {events.map((event, index) => (
@@ -55,4 +58,4 @@ const Event = () => {
     );
 }
 
-export default Event;
+export default Events;

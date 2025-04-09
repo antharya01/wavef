@@ -37,15 +37,19 @@ const About = () => {
             <div className="about-content">
                 <h1>About Us</h1>
                 <p>
-                    
-                WAVECRAZE was nothing short of a wild ride—an explosion of energy, creativity, and pure excitement! Every moment was packed with high-octane events, mind-blowing performances, and a crowd that brought unmatched energy. From epic battles to jaw-dropping acts, it was the kind of festival that left everyone craving more. The hype, the passion, the vibes—WAVECRAZE had it all.
-                </p>
-                <p>
-              Radio Nitroz proudly presents the Aftermovie of WAVECRAZE—a celebration of madness immortalized in every frame! Relive the chaos, the passion, and the pure fun as we rewind to the moments that made WAVECRAZE legendary. Watch the Aftermovie and let the vibe hit you like never before!
-                </p>
+                Where creativity sparks like wildfire and every heartbeat echoes with passion, a celebration like no other emerges at NIT Durgapur — Wavecraze!
+      </p>
+      <p>
+Radio NITroz, the Official Entertainment Club of NIT Durgapur proudly presents Wavecraze 2025, a symphony of expression, a carnival of colors, and a gathering of dreamers, performers, and believers. Within this whirlwind of excitement, the campus transforms into a stage where every talent finds its voice and every soul finds its rhythm.
+</p>    <p>
+As the curtain rises, Wavecraze unveils a treasure trove of surprises, thrilling events, and unforgettable memories. Picture yourself, swaying to soulful symphonies at musical nights to cheering through the glitz and glamour of stunning ramp walks as Wavecraze brings together an unforgettable blend of performances, competitions, and showcases designed to stir the senses and celebrate the human spirit.
+</p>   <p>
+The countdown has begun. 
+Stay tuned cause the wave is about to hit!
+</p>
             </div>
             <div className="about-image">
-                <img src="/bgimg2.jpg" alt="About" />
+                <img src="/waveposter.jpg" alt="About" />
             </div>
         </div>
     );

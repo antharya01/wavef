@@ -39,10 +39,10 @@ const Home = () => {
         <About />
       </div>
 
-      {/* Events Section */}
+      {
       <div id="events-section">
         <Events />
-      </div>
+      </div> }
 
       {/* Event Gallery Section */}
       <div id="event-gallery-section">

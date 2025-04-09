@@ -1,125 +1,105 @@
-/* ✅ Organizing Committee Section */
+/* Container */
 .oc {
-  width: 100%;
-  background-color: black;
-  padding: 3vw 0;
-  overflow: hidden;
+  padding: 50px 20px;
+  background: #0f0f0f;
+  color: white;
+  font-family: 'Poppins', sans-serif;
 }
 
-/* ✅ Section Title */
 .oc-title {
-  color: cyan;
-  text-transform: uppercase;
-  font-size: 2.5vw;
-  font-weight: 600;
+  font-size: 2.5rem;
   text-align: center;
-  margin-bottom: 2vw;
+  margin-bottom: 40px;
 }
 
-/* ✅ Marquee Container */
-#marquepics {
-  height: 15vw;
-  display: flex;
+/* Year heading */
+.team-year {
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+  color: #00bcd4; /* changed from pink to blue */
+  padding-left: 10px;
+}
+
+/* Marquee container */
+.marquee-container {
   overflow: hidden;
-  white-space: nowrap;
-}
-
-/* ✅ Moving Animation */
-.marque {
-  display: flex;
-  gap: 1.5vw;
-  width: 150%;
-  animation: move 12s linear infinite;
-}
-
-@keyframes move {
-  from {
-      transform: translateX(0%);
-  }
-  to {
-      transform: translateX(-50%);
-  }
-}
-
-/* ✅ Individual Member Cards */
-.elem {
-  width: 12vw;
   position: relative;
-  border-radius: 1vw;
-  overflow: hidden;
-}
-
-/* ✅ Images */
-.elem img {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: 1vw;
-  transition: transform 0.3s ease-in-out;
+  height: 250px;
+  margin-bottom: 50px;
 }
 
-/* ✅ Hover Effect */
-.elem:hover img {
+.marquee {
+  display: flex;
+  gap: 20px;
+  animation: scrollMarquee 25s linear infinite;
+  width: fit-content;
+}
+
+@keyframes scrollMarquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* Team member card */
+.elem {
+  background: #1e1e1e;
+  border-radius: 15px;
+  overflow: hidden;
+  min-width: 180px;
+  max-width: 180px;
+  flex-shrink: 0;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s ease;
+}
+
+.elem:hover {
   transform: scale(1.05);
 }
 
-/* ✅ Name and Role Display */
-.elemword {
-  position: absolute;
-  bottom: 0;
+.elem img {
   width: 100%;
-  text-align: center;
-  background: rgba(0, 0, 0, 0.6);
-  padding: 0.5vw 0;
-  opacity: 0;
-  transition: opacity 0.4s ease-in-out;
+  height: 180px;
+  object-fit: cover;
 }
 
-/* ✅ Show Text on Hover */
-.elem:hover .elemword {
-  opacity: 1;
+.elemword {
+  padding: 10px;
 }
 
-/* ✅ Text Styling */
 .elemword h4 {
-  color: yellow;
-  font-size: 1vw;
-  font-weight: 600;
+  margin: 5px 0;
+  font-size: 1rem;
+  color: #00bcd4; /* changed from pink to blue */
 }
 
-/* 📱 Responsive Adjustments */
+.elemword p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #ccc;
+}
+
+/* Responsive */
 @media (max-width: 768px) {
-  .oc-title {
-      font-size: 4vw;
-  }
-
-  #marquepics {
-      height: 20vw;
+  .marquee {
+    animation-duration: 40s;
   }
 
   .elem {
-      width: 18vw;
+    min-width: 140px;
+    max-width: 140px;
   }
 
-  .elemword h4 {
-      font-size: 1.5vw;
-  }
-}
-
-@media (max-width: 480px) {
-  .oc-title {
-      font-size: 5vw;
+  .elem img {
+    height: 140px;
   }
 
-  #marquepics {
-      height: 25vw;
-  }
-
-  .elem {
-      width: 22vw;
-  }
-
-  .elemword h4 {
-      font-size: 2vw;
+  .team-year {
+    font-size: 1.5rem;
   }
 }
