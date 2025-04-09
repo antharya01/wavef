@@ -1,4 +1,3 @@
-import Nav from "./Nav";
 import React from 'react';
 import { motion } from 'framer-motion';
 import './Events.css';
@@ -28,8 +27,8 @@ const Events = () => {
     return (
         
         <div className="event">
-             <Nav />
-            <h1>Our Events</h1>
+        
+            <h1>OUR EVENTS </h1>
             <div className="events">
                 {events.map((event, index) => (
                     <motion.div 

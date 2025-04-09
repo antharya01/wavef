@@ -35,7 +35,7 @@ const About = () => {
     return (
         <div className="about" ref={aboutRef}>
             <div className="about-content">
-                <h1>About Us</h1>
+                <h1>ABOUT US</h1>
                 <p>
                 Where creativity sparks like wildfire and every heartbeat echoes with passion, a celebration like no other emerges at NIT Durgapur — Wavecraze!
       </p>

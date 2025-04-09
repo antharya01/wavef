@@ -15,7 +15,7 @@ const images = [
 const EventGallery = () => {
   return (
     <div className="gallery-container">
-      <h2>Event Gallery</h2>
+      <h2>EVENT GALLERY</h2>
       <div className="gallery-grid">
         {images.map((src, index) => (
           <div className="gallery-item" key={index}>

@@ -17,7 +17,7 @@
     justify-content: space-between;
     padding: 50px 10%;
     
-    color: #fff;
+    color: #ffffff;
     opacity: 0;
     animation-duration: 1s;
     animation-fill-mode: forwards;
@@ -37,6 +37,7 @@
     font-size: 2.5rem;
     margin-bottom: 20px;
     text-align: center;
+    color: coral;
 }
 
 .about-content p {

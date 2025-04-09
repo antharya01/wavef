@@ -38,7 +38,7 @@ const Nav = () => {
           <a href="#about-section" onClick={() => setIsMobileMenuOpen(false)}>ABOUT</a>
         </li>
         <li>
-          <Link to="/events" onClick={() => setIsMobileMenuOpen(false)}>EVENTS</Link>
+        <a href="#evenrs-section" onClick={() => setIsMobileMenuOpen(false)}>EVENTS</a>
         </li>
         <li>
           <a href="#team-section" onClick={() => setIsMobileMenuOpen(false)}>TEAM-RN</a>
