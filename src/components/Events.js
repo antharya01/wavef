@@ -14,15 +14,6 @@ const Event = () => {
             link: "https://forms.gle/sampleTalentX"
         },
         {
-            title: "Comedy Night",
-            date: "30/03/2025",
-            time: "7:00 PM",
-            venue: "Grand Hall",
-            description: "A night of laughter with some of the best comedians.",
-            imgSrc: "rcomedynight.jpg",
-            link: "https://forms.gle/sampleComedyNight"
-        },
-        {
             title: "Glam It Up",
             date: "31/03/2025",
             time: "8:00 PM",
@@ -30,15 +21,6 @@ const Event = () => {
             description: "Witness the most glamorous fashion night in town.",
             imgSrc: "rcomedynight.jpg",
             link: "https://forms.gle/sampleGlamItUp"
-        },
-        {
-            title: "Movie Mystic",
-            date: "01/04/2025",
-            time: "9:00 PM",
-            venue: "Open Air Theater",
-            description: "A special screening of classic and new films.",
-            imgSrc: "rcomedynight.jpg",
-            link: "https://forms.gle/sampleMovieMystic"
         }
     ];
 
