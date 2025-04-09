@@ -1,49 +1,57 @@
+.countdown-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  background: transparent;
+  overflow: hidden;
+}
 
-.countdown {
-    font-family: Arial, sans-serif;
-    text-align: center;
-    margin: 20px auto;
-    padding: 20px;
-    width: 300px;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+.typing-message {
+  font-size: 2.5rem;
+  color: #f7e9b9;
+  font-weight: 700;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 2px solid #f7e9b9;
+  width: 0;
+  animation: typing 4s steps(22) infinite alternate, blink-caret 0.75s step-end infinite;
+  text-shadow:
+    0 0 6px rgba(247, 233, 185, 0.5),
+    0 0 12px rgba(247, 233, 185, 0.3);
+  max-width: 100vw;
+}
+
+/* Animation keyframes */
+@keyframes typing {
+  0% {
+    width: 0;
   }
-  
-  .countdown h2 {
-    font-size: 24px;
-    margin-bottom: 15px;
-    font-weight: bold;
-    color: coral;
+  100% {
+    width: 22ch;
   }
-  
-  .countdown p {
-    font-size: 18px;
-    font-weight: normal;
-    margin-bottom: 10px;
-    color: #ffffff;
+}
+
+@keyframes blink-caret {
+  0%, 100% {
+    border-color: transparent;
   }
-  
-  .countdown .time-container {
-    display: flex;
-    justify-content: space-around;
-    margin-top: 20px;
-    width:3vw;
+  50% {
+    border-color: #00f0ff;
   }
-  
-  .countdown .time-item {
-    background: #ffffff;
-    color: rgb(0, 0, 0);
-    padding: 15px;
-    font-size: 24px;
-    font-weight: bold;
-    width: 80px;
-    text-align: center;
+}
+
+/* Responsive text sizing for smaller screens */
+@media (max-width: 768px) {
+  .typing-message {
+    font-size: 1.75rem;
+    animation: typing 4s steps(22) infinite alternate, blink-caret 0.75s step-end infinite;
   }
-  
-  .countdown .time-item span {
-    display: block;
-    font-size: 14px;
-    font-weight: normal;
-    margin-top: 5px;
+}
+
+@media (max-width: 480px) {
+  .typing-message {
+    font-size: 1.3rem;
+    animation: typing 4s steps(22) infinite alternate, blink-caret 0.75s step-end infinite;
   }
-  
+}

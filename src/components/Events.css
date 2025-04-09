@@ -5,20 +5,17 @@ body {
     padding: 0;
     color: white;
 }
-
 /* Section wrapper */
 .event {
     text-align: center;
     padding: 50px 20px;
 }
-
 /* Heading */
 h1 {
     font-size: 2.5rem;
     margin-bottom: 30px;
-    color:coral;
+    color: coral;
 }
-
 /* Events Grid */
 .events {
     display: grid;
@@ -26,48 +23,103 @@ h1 {
     gap: 40px;
     justify-content: center;
 }
-
 /* Two-column layout on tablets/desktops */
 @media (min-width: 768px) {
     .events {
         grid-template-columns: repeat(2, 1fr);
     }
 }
-
 /* Event Card */
 .event-card {
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     align-items: center;
     background: #111;
     border-radius: 10px;
     padding: 20px;
-    max-width: 450px;
     margin: auto;
+    max-width: 450px;
+    min-height: 550px;
     box-shadow: 0 4px 10px rgba(255, 255, 255, 0.1);
     opacity: 0;
     transform: translateY(50px);
     transition: all 0.5s ease-in-out;
+    position: relative;
+    overflow: hidden;
 }
-
 /* Fade-in animation */
 .event-card.left,
 .event-card.right {
     opacity: 1;
     transform: translateY(0);
 }
+/* Special Glam Card Styling */
+.event-card.glam {
+    border: 2px solid #ff69b4;
+    background: linear-gradient(135deg, #1a1a2e, #2a0845);
+    box-shadow: 0 0 20px #ff69b4, 0 0 40px rgba(255, 105, 180, 0.5);
+    animation: glamPulse 2s infinite alternate;
+    overflow: hidden;
+    min-height: 550px;
+    padding: 30px 24px; /* Increased inner space */
+    padding-bottom: 50px; /* More bottom space for visual match */
+}
+/* Pulsing Glow Animation */
+@keyframes glamPulse {
+    0% {
+        box-shadow: 0 0 15px #ff69b4, 0 0 25px rgba(255, 105, 180, 0.5);
+    }
+    100% {
+        box-shadow: 0 0 25px #ff69b4, 0 0 50px rgba(255, 105, 180, 0.8);
+    }
+}
+/* Sparkle Background */
+.event-card.glam::before {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255,255,255,0.3) 1px, transparent 1px);
+    background-size: 40px 40px;
+    animation: sparkle 6s linear infinite;
+    pointer-events: none;
+    z-index: 0;
+}
 
-/* Image container */
+@keyframes sparkle {
+    0% {
+        transform: translate(0, 0);
+    }
+    100% {
+        transform: translate(40px, 40px);
+    }
+}
+
+/* Keep Glam content above sparkle background */
+.event-card.glam > * {
+    position: relative;
+    z-index: 1;
+}
+
+/* Image Container */
 .image-container {
     width: 100%;
     display: flex;
     justify-content: center;
+    align-items: center;
     margin-top: 20px;
+    min-height: 220px;
 }
 
 .image-container img {
     width: 100%;
     max-width: 300px;
+    max-height: 350px; /* Cap tall images */
+    height: auto;
+    object-fit: contain;
     border-radius: 10px;
 }
 
@@ -81,6 +133,7 @@ h1 {
     font-size: 1.5rem;
     margin: 10px 0;
     color: #ee07ea;
+    text-shadow: 0 0 10px #ee07ea, 0 0 20px #ee07ea;
 }
 
 .event-info h5,
@@ -107,7 +160,7 @@ h1 {
     background: #0056b3;
 }
 
-/* Responsive fixes for small screens */
+/* Responsive for Small Screens */
 @media (max-width: 480px) {
     .event-info h2 {
         font-size: 1.25rem;
@@ -125,5 +178,6 @@ h1 {
 
     .image-container img {
         max-width: 250px;
+        height: auto;
     }
 }

@@ -7,9 +7,9 @@ const images = [
    "./IMG_4272.JPG",
   "./IMG_8514.jpg",
   "./DSC_0883[1].jpg",
-  "./image1.jpg",
-  "./image1.jpg",
-  "./image1.jpg",
+  "./IMG_4271 (1).jpg",
+  "./eventg.jpg",
+  "./DSC_0847[1].jpg",
 ];
 
 const EventGallery = () => {

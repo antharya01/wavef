@@ -24,7 +24,7 @@ const Loader = () => {
             <div className="barb"></div>
             <div className="barb"></div>
           </div>
-          <h1 style={{ color: "white" }}>Coming soon...</h1>
+          <h1 style={{ color: "white" }}>Loading...</h1>
         </div>
       ) : (
         <div id="content">

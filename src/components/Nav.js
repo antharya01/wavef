@@ -38,13 +38,10 @@ const Nav = () => {
           <a href="#about-section" onClick={() => setIsMobileMenuOpen(false)}>ABOUT</a>
         </li>
         <li>
-        <a href="#evenrs-section" onClick={() => setIsMobileMenuOpen(false)}>EVENTS</a>
+        <a href="#events-section" onClick={() => setIsMobileMenuOpen(false)}>EVENTS</a>
         </li>
         <li>
           <a href="#team-section" onClick={() => setIsMobileMenuOpen(false)}>TEAM-RN</a>
-        </li>
-        <li>
-          <a href="#sponsors-section" onClick={() => setIsMobileMenuOpen(false)}>SPONSORS</a>
         </li>
         <li>
           <a href="#footer" onClick={() => setIsMobileMenuOpen(false)}>CONTACT</a>

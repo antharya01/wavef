@@ -2,7 +2,6 @@ import React, { useEffect } from "react";
 import "./Home.css";
 import Nav from "./components/Nav";
 import Footer from "./components/Footer";
-import WavecrazeSponser from "./components/WavecrazeSponser";
 import Timer from "./components/Timer";
 import About from "./components/About";
 import Events from "./components/Events";
@@ -49,10 +48,7 @@ const Home = () => {
         <EventGallery />
       </div>
 
-      {/* Sponsors Section */}
-      <div id="sponsors-section">
-        <WavecrazeSponser />
-      </div>
+   
 
       {/* Team Section */}
       <div id="team-section">
