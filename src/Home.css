@@ -27,6 +27,23 @@ html, body {
   overflow: hidden;
   margin: 0;
   padding: 0;
+  animation: zoomInBackground 10s infinite alternate; /* Background zoom animation */
+}
+
+/* Keyframes for Background Zoom Effect */
+@keyframes zoomInBackground {
+  0% {
+    transform: scale(1);
+    background-position: center;
+  }
+  50% {
+    transform: scale(1.1);
+    background-position: center;
+  }
+  100% {
+    transform: scale(1);
+    background-position: center;
+  }
 }
 
 /* Heading */
@@ -54,7 +71,7 @@ html, body {
   margin: 0 0 0 -20em;
   font-weight: 900;
   opacity: 0;
-  animation: fadeInSlide 1s ease-out forwards;
+  animation: fadeInSlide 1s ease-out forwards, popOut 1.5s ease-out;
 }
 
 /* Light Gold Pop-out Heading Text */
@@ -101,11 +118,17 @@ html, body {
 
 /* ---------- Responsive for Small Screens ---------- */
 @media (max-width: 768px) {
+  .head {
+    padding-top: 8em;
+    align-items: center;
+    justify-content: center;
+  }
+
   .head p {
     position: relative;
-    top: 25%; /* Move down from the top on small screens */
+    top: 0;
     left: 0;
-    margin-top:10em;
+    margin-top: 1.5em;
     margin-left: auto;
     margin-right: auto;
     padding: 1em 1em;
@@ -123,36 +146,18 @@ html, body {
     font-weight: 700;
     line-height: 1.3;
   }
-}@media (max-width: 376px) {
-  .head p {
-    position: relative;
-    top: 30%; /* Move down a bit more for 375px width screens */
-    left: 0;
-    margin-top:30em;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 1em 1em;
-    width: 90%;
-    max-width: 100%;
-    text-align: center;
-    border-width: 3px 0;
-    font-size: 1rem;
-    letter-spacing: 0.15em;
-    font-weight: 900;
-  }
-
-  .head p span {
-    font-size: 2.2em;
-    font-weight: 800;
-  }
 }
 
 @media (max-width: 480px) {
+  .head {
+    padding-top: 6em;
+  }
+
   .head p {
     font-size: 1rem;
     padding: 1em 0.5em;
     letter-spacing: 0.15em;
-    margin-top: 12em;
+    margin-top: 2em;
     font-weight: 900;
   }
 

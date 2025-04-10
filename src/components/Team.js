@@ -62,7 +62,6 @@ const committeeMembers = [
 { name: "Aditya Shaw", img: "/aditya.jpg", year: "2nd Year" },
 { name: "Shrutisadhan Mudly", img: "/mudly.jpg", year: "2nd Year" },
 { name: "Debjoyti shil", img: "/deb.jpg", year: "2nd Year" },
-{ name: "Srijian", img: "/srijian.jpg", year: "2nd Year" },
 { name: "Soumyadeep dey", img: "/soum.jpg", year: "2nd Year" },
 
 ];
