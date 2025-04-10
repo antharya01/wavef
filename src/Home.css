@@ -4,8 +4,7 @@
 /* Reset & General Styles */
 html, body {
   margin: 0;
-  padding: 0;
-  width: 100%;
+  padding: 0;   
   height: 100%;
   overflow-x: hidden;
   background-color: black;
@@ -16,7 +15,7 @@ html, body {
 .home {
   width: 100%;
   min-height: 100vh;
-  background-image: url('bgimg4.jpg'); /* Background image */
+  background-image: url('bgimg1.jpg'); /* Background image */
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -28,6 +27,7 @@ html, body {
   overflow: hidden;
   margin: 0;
   padding: 0;
+  animation: zoomIn 10s infinite alternate; /* Animation for background zoom */
 }
 
 /* Heading */
@@ -38,6 +38,7 @@ html, body {
   font-family: 'Poppins', sans-serif;
   font-size: 5vw;
   font-weight: bold;
+  animation: fadeInScale 2s ease-out; /* Fade-in and scale animation */
 }
 
 /* Animated Heading Text */
@@ -53,9 +54,12 @@ html, body {
   left: 50%;
   width: 40em;
   margin: 0 0 0 -20em;
+  font-weight: 900;
+  opacity: 0;
+  animation: fadeInSlide 2s ease-out forwards, textReveal 3s ease-out 1s; /* Multiple animations */
 }
 
-/* Animated Text Effect */
+/* Light Gold Pop-out Heading Text */
 .head p span {
   font-family: 'Poppins', sans-serif;
   font-size: 4em;
@@ -64,24 +68,94 @@ html, body {
   padding: .25em 0 .325em;
   display: block;
   margin: 0 auto;
-  text-shadow: 0 0 50px rgba(138, 43, 226, 0.5); /* Purple glow effect */
-
-  /* Animated Gradient */
-  background: linear-gradient(45deg, rgb(217, 28, 10), #000000, rgb(255, 0, 0));
-  background-size: 200% auto;
-  background-clip: text;
-  -webkit-background-clip: text;
-  color: transparent;
-  -webkit-text-fill-color: transparent;
-
-  /* Smooth Gradient Animation */
-  animation: gradientMove 5s linear infinite;
+  color: #FFD700; /* Light gold */
+  text-shadow: 0 0 10px rgba(255, 215, 0, 0.6),
+               0 0 20px rgba(255, 215, 0, 0.3);
+  animation: popOut 1.5s ease-out, textGlow 2s infinite alternate; /* Added glow effect */
 }
 
-/* Animate Background Gradient */
-@keyframes gradientMove {
-  0% { background-position: 0% 50%; }
-  100% { background-position: 200% 50%; }
+/* Keyframes for Fade In & Slide Up Animation */
+@keyframes fadeInSlide {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Keyframes for Fade In & Scale Animation */
+@keyframes fadeInScale {
+  0% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Keyframes for Simple Pop-out Animation */
+@keyframes popOut {
+  0% {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1.05);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Keyframes for Background Zoom Effect */
+@keyframes zoomIn {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Keyframes for Text Reveal Effect */
+@keyframes textReveal {
+  0% {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  50% {
+    opacity: 0.5;
+    transform: translateX(0);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Keyframes for Text Glow Effect */
+@keyframes textGlow {
+  0% {
+    text-shadow: 0 0 10px rgba(255, 215, 0, 0.6),
+                 0 0 20px rgba(255, 215, 0, 0.3);
+  }
+  50% {
+    text-shadow: 0 0 20px rgba(255, 215, 0, 0.8),
+                 0 0 30px rgba(255, 215, 0, 0.5);
+  }
+  100% {
+    text-shadow: 0 0 10px rgba(255, 215, 0, 0.6),
+                 0 0 20px rgba(255, 215, 0, 0.3);
+  }
 }
 
 /* ---------- Responsive for Small Screens ---------- */
@@ -106,6 +180,7 @@ html, body {
     border-width: 3px 0;
     font-size: 1.1rem;
     letter-spacing: 0.2em;
+    font-weight: 900;
   }
 
   .head p span {
@@ -125,6 +200,7 @@ html, body {
     padding: 1em 0.5em;
     letter-spacing: 0.15em;
     margin-top: 2em;
+    font-weight: 900;
   }
 
   .head p span {

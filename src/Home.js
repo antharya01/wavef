@@ -38,17 +38,14 @@ const Home = () => {
         <About />
       </div>
 
-      {
       <div id="events-section">
         <Events />
-      </div> }
+      </div>
 
       {/* Event Gallery Section */}
       <div id="event-gallery-section">
         <EventGallery />
       </div>
-
-   
 
       {/* Team Section */}
       <div id="team-section">
@@ -57,7 +54,8 @@ const Home = () => {
 
       {/* Footer Section */}
       <div id="footer">
-      <Footer /></div>
+        <Footer />
+      </div>
     </div>
   );
 };
